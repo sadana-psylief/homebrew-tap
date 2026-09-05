@@ -8,12 +8,23 @@ shipped switched off.
 brew install --cask sadana-psylief/tap/sarvkrit
 ```
 
+The first install asks you to confirm the tap — Homebrew does that for anything outside
+its own repositories.
+
 Already have Sarvkrit in `/Applications` from the DMG or the install script? Homebrew
-refuses to overwrite an app it did not install, so adopt the existing copy instead:
+refuses to write over an app it did not install, so point it at the copy you have:
 
 ```sh
-brew install --cask --adopt sadana-psylief/tap/sarvkrit
+brew install --cask --force sadana-psylief/tap/sarvkrit    # any existing copy
+brew install --cask --adopt sadana-psylief/tap/sarvkrit    # only if it is already this version
 ```
+
+`--adopt` leaves the bundle where it is and just takes charge of it, but it compares
+`CFBundleShortVersionString` and `CFBundleVersion` first and refuses with *"the existing
+App is different"* when they don't match — so it is only for someone already on the
+version the cask installs. `--force` replaces whatever is there and always works.
+Settings live in `~/Library` and the Accessibility grant is keyed to the bundle ID,
+signature and path, so nothing is lost either way.
 
 Then, from there on:
 
