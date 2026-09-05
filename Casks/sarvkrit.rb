@@ -19,7 +19,7 @@ cask "sarvkrit" do
   # not exist before it. A cask can only name whole releases, so this is the closest it can say;
   # LSMinimumSystemVersion in the bundle and the sw_vers check in sarvkrit.com/install enforce
   # the exact version.
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Sarvkrit.app"
 
