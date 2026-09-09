@@ -1,6 +1,6 @@
 cask "sarvkrit" do
-  version "1.1.0"
-  sha256 "11fa22bef4633299a8fe137fe4422dc80e3a51be3122b300fbbfb3b67aaf5f76"
+  version "1.1.1"
+  sha256 "5e23130b0d3dc26551b3988d08e604032af57caf1523c7193f71f5497eeb4fd5"
 
   # Pinned to the tag, not releases/latest/download/. `latest` moves the moment the next release
   # is cut, and a moving URL behind a fixed sha256 is a checksum mismatch waiting to happen.
